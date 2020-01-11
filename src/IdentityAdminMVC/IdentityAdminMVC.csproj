@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="wwwroot\js\**" />
+    <Compile Remove="wwwroot\media\**" />
+    <Compile Remove="wwwroot\plugins\**" />
+    <Content Remove="wwwroot\js\**" />
+    <Content Remove="wwwroot\media\**" />
+    <Content Remove="wwwroot\plugins\**" />
+    <EmbeddedResource Remove="wwwroot\js\**" />
+    <EmbeddedResource Remove="wwwroot\media\**" />
+    <EmbeddedResource Remove="wwwroot\plugins\**" />
+    <None Remove="wwwroot\js\**" />
+    <None Remove="wwwroot\media\**" />
+    <None Remove="wwwroot\plugins\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Shared\_MobileHeader.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\Shared\_MobileHeader.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MechanicsBank.IdentityServer.Data\MechanicsBank.IdentityServer.Data.csproj" />
+    <ProjectReference Include="..\MechanicsBank.IdentityServer.Domain\MechanicsBank.IdentityServer.Domain.csproj" />
+  </ItemGroup>
+</Project>

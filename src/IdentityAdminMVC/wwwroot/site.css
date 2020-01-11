@@ -1,0 +1,37 @@
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: Poppins, Helvetica, sans-serif;
+    background-color: #646c9a;
+}
+
+.wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 265px;
+}
+
+.page-wrapper {
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+@media (min-width: 768px) {
+    .page-wrapper {
+        position: inherit;
+        margin: 0 0 0 220px;
+        min-height: 100vh;
+    }
+}
+
+.top-header{
+
+}
